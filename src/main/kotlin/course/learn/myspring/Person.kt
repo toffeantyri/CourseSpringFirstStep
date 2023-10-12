@@ -1,10 +1,17 @@
 package course.learn.myspring
 
-class Person(val pet: Pet) {
+class Person(val firstPet: Pet) {
 
-    fun callYourPet() {
-        println("Hello! Where are your, my dear pet?")
-        pet.say()
+    var secondPet: Pet? = null // you can use lateinit (setter generate by name)
+
+    fun callYourFirstPet() {
+        println("Hello! Where are your, my first pet?")
+        firstPet.say()
+    }
+
+    fun callYourSecondPet() {
+        println("Hello! Where are your, my second pet?")
+        secondPet?.say()
     }
 
 }

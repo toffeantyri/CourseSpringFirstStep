@@ -4,13 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myPet"
+    <bean id="myDog"
           class="course.learn.myspring.Dog">
+    </bean>
+
+    <bean id="myCat"
+          class="course.learn.myspring.Cat">
     </bean>
 
     <bean id="myPerson"
           class="course.learn.myspring.Person">
-        <constructor-arg ref="myPet"/>
+        <constructor-arg ref="myCat"/>
+        <property name="secondPet" ref="myDog"/>
     </bean>
+
 
 </beans>
