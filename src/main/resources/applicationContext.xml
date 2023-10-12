@@ -16,6 +16,8 @@
           class="course.learn.myspring.Person">
         <constructor-arg ref="myCat"/>
         <property name="secondPet" ref="myDog"/>
+        <property name="age" value="36"/>
+        <property name="name" value="Anton"/>
     </bean>
 
 

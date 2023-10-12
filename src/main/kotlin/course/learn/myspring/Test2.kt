@@ -10,6 +10,8 @@ fun main() {
     person.apply {
         callYourFirstPet()
         callYourSecondPet()
+        sayMyNameIs()
+        sayMyAge()
     }
     context.close()
 }
