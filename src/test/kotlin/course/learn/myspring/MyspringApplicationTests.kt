@@ -1,4 +1,4 @@
-package course.learn.myspring.myspring
+package course.learn.myspring
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

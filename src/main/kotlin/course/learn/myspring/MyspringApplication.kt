@@ -1,4 +1,4 @@
-package course.learn.myspring.myspring
+package course.learn.myspring
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

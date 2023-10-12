@@ -1,4 +1,4 @@
-package course.learn.myspring.myspring
+package course.learn.myspring
 
 fun main(){
     val pet : Pet = Dog()
