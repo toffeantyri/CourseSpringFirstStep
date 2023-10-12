@@ -8,5 +8,9 @@
           class="course.learn.myspring.Dog">
     </bean>
 
+    <bean id="myPerson"
+          class="course.learn.myspring.Person">
+        <constructor-arg ref="myPet"/>
+    </bean>
 
 </beans>
