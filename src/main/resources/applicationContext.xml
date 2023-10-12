@@ -5,6 +5,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="myPet"
-          class="course.learn.myspring.Dog"/>
+          class="course.learn.myspring.Dog">
+    </bean>
+
 
 </beans>
