@@ -2,7 +2,7 @@ package course.learn.myspring
 
 import kotlin.properties.Delegates
 
-class Person(val firstPet: Pet) {
+class Person(private val firstPet: Pet) {
 
     var secondPet: Pet? = null // you can use lateinit (setter generate by name)
 
