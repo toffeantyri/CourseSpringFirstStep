@@ -8,11 +8,16 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="myDog"
-          class="course.learn.myspring.Dog">
+          class="course.learn.myspring.Dog"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
     <bean id="myCat"
-          class="course.learn.myspring.Cat">
+          class="course.learn.myspring.Cat"
+          scope="prototype"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
     <bean id="myPerson"
