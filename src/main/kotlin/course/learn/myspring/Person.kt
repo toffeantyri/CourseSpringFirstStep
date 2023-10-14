@@ -1,26 +1,23 @@
 package course.learn.myspring
 
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
-import org.springframework.stereotype.Component
 
-@Component("personBean")
+//@Component("personBean")
 class Person {
     var firstPet: Pet? = null
 
-    @Qualifier("dog")
-    @Autowired
+    //    @Qualifier("dog")
+//    @Autowired
     var secondPet: Pet? = null // you can use lateinit (setter generate by name)
 
     @Value("36")
     var age: Int? = null
 
     @Value("\${person.name}")
-    val name: String? = null
+    var name: String? = null
 
-    @Autowired
-    constructor(@Qualifier("catBean") firstPet: Pet) {
+    //@Autowired
+    constructor(/*@Qualifier("catBean") */firstPet: Pet) {
         this.firstPet = firstPet
     }
 

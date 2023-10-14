@@ -1,12 +1,7 @@
 package course.learn.myspring
 
-import jakarta.annotation.PostConstruct
-import jakarta.annotation.PreDestroy
-import org.springframework.context.annotation.Scope
-import org.springframework.stereotype.Component
-
-@Component("catBean")
-@Scope("singleton")
+//@Component("catBean")
+//@Scope("singleton")
 class Cat : Pet {
 
     var name = "Murzik"
@@ -19,12 +14,12 @@ class Cat : Pet {
         println("${name}: Meow-meow")
     }
 
-    @PostConstruct
+    //@PostConstruct
     private fun init() {
         println("Cat : init method $this")
     }
 
-    @PreDestroy
+    //@PreDestroy
     private fun destroy() {
         println("Cat : destroy method $this")
     }

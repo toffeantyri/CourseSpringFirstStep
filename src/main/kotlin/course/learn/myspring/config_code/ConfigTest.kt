@@ -8,10 +8,14 @@ fun main() {
     val context = AnnotationConfigApplicationContext(MyConfig::class.java)
 
     val person = context.getBean("personBean", Person::class.java)
+    val person2 = context.getBean("personBean", Person::class.java)
 
+    println(person.name)
     person.callYourFirstPet()
     person.callYourSecondPet()
-    println(person.name)
-    println(person.age)
+    println(person2.name)
+    person2.callYourFirstPet()
+    person2.callYourSecondPet()
+
 
 }
