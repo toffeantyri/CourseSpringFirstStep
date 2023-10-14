@@ -1,20 +1,25 @@
 package course.learn.myspring
 
+import org.springframework.stereotype.Component
+
+@Component("catBean")
 class Cat : Pet {
+
+    var name = "Murzik"
 
     constructor() {
         println("Cat created $this")
     }
 
     override fun say() {
-        println("Meow-meow")
+        println("${name}: Meow-meow")
     }
 
-    fun init() {
+    private fun init() {
         println("Cat : init method $this")
     }
 
-    fun destroy() {
+    private fun destroy() {
         println("Cat : destroy method $this")
     }
 }
