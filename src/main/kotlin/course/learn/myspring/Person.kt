@@ -2,8 +2,8 @@ package course.learn.myspring
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
-import kotlin.properties.Delegates
 
 @Component("personBean")
 class Person {
@@ -13,8 +13,11 @@ class Person {
     @Autowired
     var secondPet: Pet? = null // you can use lateinit (setter generate by name)
 
-    var age by Delegates.notNull<Int>()
-    lateinit var name: String
+    @Value("36")
+    var age: Int? = null
+
+    @Value("\${person.name}")
+    val name: String? = null
 
     @Autowired
     constructor(@Qualifier("catBean") firstPet: Pet) {

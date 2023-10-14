@@ -20,8 +20,10 @@ fun main() {
 
     val person = context.getBean("personBean", Person::class.java)
 
-    person.callYourFirstPet()
-    person.callYourSecondPet()
+//    person.callYourFirstPet()
+//    person.callYourSecondPet()
+    println(person.name)
+    println(person.age)
 
     context.close()
 
