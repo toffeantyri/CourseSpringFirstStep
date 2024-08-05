@@ -10,10 +10,11 @@ fun main() {
     val person = context.getBean("personBean", Person::class.java)
     val person2 = context.getBean("personBean", Person::class.java)
 
-    println(person.name)
+    println(person.name + " " + person.age)
     person.callYourFirstPet()
     person.callYourSecondPet()
-    println(person2.name)
+
+    println(person2.name + " " + person.age)
     person2.callYourFirstPet()
     person2.callYourSecondPet()
 

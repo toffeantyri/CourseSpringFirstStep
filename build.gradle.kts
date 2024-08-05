@@ -27,6 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+
 }
 
 tasks.withType<KotlinCompile> {

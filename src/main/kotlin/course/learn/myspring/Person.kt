@@ -10,7 +10,7 @@ class Person {
 //    @Autowired
     var secondPet: Pet? = null // you can use lateinit (setter generate by name)
 
-    @Value("36")
+    @Value("\${person.age}") //config class annotation PropertySource(application.properies) contain it value
     var age: Int? = null
 
     @Value("\${person.name}")
