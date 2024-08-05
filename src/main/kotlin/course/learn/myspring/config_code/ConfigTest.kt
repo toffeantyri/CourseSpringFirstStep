@@ -14,6 +14,7 @@ fun main() {
     person.callYourFirstPet()
     person.callYourSecondPet()
 
+
     println(person2.name + " " + person.age)
     person2.callYourFirstPet()
     person2.callYourSecondPet()
