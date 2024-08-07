@@ -9,11 +9,18 @@ import org.springframework.stereotype.Component
 @Aspect
 class AspectLibrary {
 
-    //@Before("execution(* *getBook())") //it work too
-    //@Before("execution(public (*) getBook())")
-    @Before("execution(* getBook())")
-    //@Before("execution(public void getBook())") //it work too
+    @Before("execution(public void aoc.UniLibrary.getBook())")
     fun beforeGetBookAdvice() {
-        println("beforeGetBookAdvice попытка взять книгу")
+        println("beforeGetBookAdvice попытка взять книгу из UniLibrary")
+    }
+
+    @Before("execution(public * getBook())")
+    fun beforeGetBookAdvice2() {
+        println("beforeGetBookAdvice попытка взять книгу из любой Library")
+    }
+
+    @Before("execution(* take*())")
+    fun beforeTakeMagazineAdvice() {
+        println("beforeTakeMagazineAdvice попытка взять журнал")
     }
 }
