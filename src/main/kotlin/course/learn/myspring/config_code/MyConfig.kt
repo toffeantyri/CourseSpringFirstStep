@@ -8,7 +8,7 @@ import org.springframework.context.annotation.*
 
 @Configuration
 @ComponentScan("course.learn.myspring")
-@PropertySource("application.properties")
+@PropertySource("classpath:application.properties")
 class MyConfig {
 
 
