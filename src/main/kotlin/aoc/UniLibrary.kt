@@ -9,6 +9,10 @@ class UniLibrary : AbstractLibrary() {
         println("Мы берем книгу из UniLibrary")
     }
 
+    override fun getBookById(book: Book) {
+        println("Мы берем книгу ${book.id} из UniLibrary")
+    }
+
     fun returnBook() {
         println("Мы возвращаем книгу в UniLibrary")
     }

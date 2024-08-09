@@ -9,4 +9,8 @@ class SchoolLibrary : AbstractLibrary() {
         println("Мы берем книгу из SchoolLibrary")
     }
 
+    override fun getBookById(book: Book) {
+        println("Мы берем книгу ${book.id} из SchoolLibrary")
+    }
+
 }

@@ -14,6 +14,20 @@ class AspectLibrary {
         println("beforeGetBookAdvice попытка взять книгу из UniLibrary")
     }
 
+    @Before("execution(public void getBookById(aoc.Book))")
+    fun beforeGetBookByIdAdvice() {
+        println("beforeGetBookByIdAdvice попытка взять книгу из UniLibrary : Book")
+    }
+
+    @Before("execution(public void getBookById(*))")
+    fun beforeGetBookByIdAdvice2() {
+        println("beforeGetBookByIdAdvice попытка взять книгу из UniLibrary : anyParam*")
+    }
+
+    @Before("execution(* *(..))")
+    fun beforeGetBookByIdAdviceAllMethods() {
+        println("all methods, any name, any counts of params")
+    }
     @Before("execution(public * getBook())")
     fun beforeGetBookAdvice2() {
         println("beforeGetBookAdvice попытка взять книгу из любой Library")
